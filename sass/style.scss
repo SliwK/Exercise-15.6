@@ -1,0 +1,29 @@
+body {
+  background-color: #607D8B;
+  color: #BBBBBB;
+  font-family: 'Comfortaa', cursive;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+  width: 900px;
+}
+
+.controls {
+  color: #BBBBBB;
+  font-size: 60px;
+  padding: 20px;
+  a {
+    color: #BBBBBB;
+    text-decoration: none;
+    &:hover {
+      color: black;
+      text-decoration: none;
+    }
+  }
+}
+
+.stopwatch {
+  font-size: 100px;
+}
