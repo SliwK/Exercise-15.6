@@ -59,6 +59,21 @@ class Stopwatch {
         this.print();
     }
 
+    save() {
+  //    console.log(this.format(this.times));
+      var resultList = document.getElementById('results');
+      var newTime = document.createElement('li');
+      newTime.innerText = this.format(this.times);
+      resultList.appendChild(newTime);
+    }
+
+    clear() {
+      var clearList = document.getElementById('results');
+      while (clearList.hasChildNodes()) {
+        clearList.removeChild(clearList.firstChild);
+    }
+    }
+
 }
 
 const stopwatch = new Stopwatch(
@@ -71,6 +86,10 @@ var stopButton = document.getElementById('stop');
 stopButton.addEventListener('click', () => stopwatch.stop());
 var resetButton = document.getElementById('reset');
 resetButton.addEventListener('click', () => stopwatch.resetManually());
+var saveButton = document.getElementById('save');
+saveButton.addEventListener('click', () => stopwatch.save());
+var clearButton = document.getElementById('clear');
+clearButton.addEventListener('click', () => stopwatch.clear());
 
 function pad0(value) {
 let result = value.toString();
