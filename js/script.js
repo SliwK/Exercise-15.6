@@ -51,8 +51,7 @@ class Stopwatch {
     resetManually() {
       if(this.running) {
         this.running = false;
-      } else {
-          clearInterval(this.watch);
+        clearInterval(this.watch);
         }
         this.reset();
         this.print();

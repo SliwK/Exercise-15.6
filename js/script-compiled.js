@@ -76,7 +76,6 @@ var Stopwatch = function () {
         value: function resetManually() {
             if (this.running) {
                 this.running = false;
-            } else {
                 clearInterval(this.watch);
             }
             this.reset();
